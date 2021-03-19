@@ -2,4 +2,4 @@ bim
 
 
 
-dotnet run --project plwbim "duplex.ifc" "duplex.json"
+dotnet run --project path/to/sources/folder/ "duplex.ifc" "duplex.json"
