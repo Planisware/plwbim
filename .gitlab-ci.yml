@@ -1,0 +1,9 @@
+check_plwbim:
+        image: mcr.microsoft.com/dotnet/core/sdk:3.1
+        tags:
+                - dev
+                - pascal
+        script:
+                - dotnet run --project . "duplex.ifc" "duplex_dotnet.json"
+                - bin/Debug/netcoreapp3.1/plwbim "duplex.ifc" "duplex_plwbim.json"
+                - diff "duplex_dotnet.json" "duplex_plwbim.json"
